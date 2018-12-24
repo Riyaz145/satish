@@ -40,5 +40,33 @@ $ sudo apt-get update
 $ sudo apt-get install ansible -y
 To remove ansible: $ sudo ap-get remove ansible
 Configure Ansible Hosts & Groups: $ cd /etc/ansible/
-$sudo  v
+$sudo vi hosts
+add hosts
+///[MSR-test-Instance-1] 
+18.216.69.169
+[MSR-test-Instance-2]
+18.222.189.132///
 
+[all]
+18.216.69.169
+18.222.189.132
+ 
+ ------------------------------------------------
+command to generate key 
+ $ ssh-keygen  -->enter 3 times 
+ -->go to ssh   --> $ cd .ssh
+ $ cat id_rsa.pub ---> copy public key and paste it on authorized_key ---> $ sudo vi authorized_key
+ Repeat same step --copy  id_rsa.pub key from instance 1 and paste in authorized keys for instance 2
+ give root permissions --->$ cd /etc/ssh/ ----> $ sudo vi sshd_config ----> passwordAuthentication yes
+ restart ssh ----> $ sudo service sshd restart
+ To check status ---> $ sudo service sshd status
+ 
+ ------------------------------------------------------
+To create ansible playbook
+--------------------------
+ $ cd /etc/ansible/ 
+create playbook --->$ sudo vi playbook.yml
+
+ 
+ 
+ 

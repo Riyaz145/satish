@@ -1,9 +1,9 @@
 # Create EC2 instance #
 ----------------------------------------------------------------------------------------------
-               Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
-               Choose Launch Instance.
-               Choose an Amazon Machine Image (AMI), find an Ubuntu Server 16.04 LTS AMI of the list and choose Select.
-               Choose an Instance Type(t2 micro), choose Next: Configure Instance Details.
+              --> Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+              --> Choose Launch Instance.
+              --> Choose an Amazon Machine Image (AMI), find an Ubuntu Server 16.04 LTS AMI of the list and choose Select.
+              --> Choose an Instance Type(t2 micro), choose Next: Configure Instance Details.
                Configure Instance Details[number of instances 2], choose Network, and then choose the entry for your default VPC.
                Choose Next: Add Storage.
                Choose Next: Tag Instance.

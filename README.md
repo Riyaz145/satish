@@ -1,4 +1,4 @@
-Create EC2 instance:
+# Create EC2 instance #
 --------------------------------------------------
 Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
 Choose Launch Instance.
@@ -20,10 +20,9 @@ Choose View Instances.
 Hostname of Instance 1 : MSR-test-Instance-1
 Hostname of Instance 2 : MSR-test-Instance-2
 
--------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
-SSH connection to server:
--------------------------------------------------
+---------------------------------------------------------------------------------------------------
+# SSH connection to server #
+---------------------------------------------------------------------------------------------------
 Download PuTTY from http://www.chiark.greenend.org.uk/~sgtatham/putty/ or another PuTTY download source. The "putty.exe" download is good for basic SSH.
 Save the download to your C:\WINDOWS folder.
 Double-click on the putty.exe program to launch the application.
@@ -33,9 +32,8 @@ Enter your connection settings:
       (c)Connection Type: SSH --->select Auth---> Browse your ppk file --->open
       
 ---------------------------------------------------------------------------------------------------
+# Install Ansible on Ubuntu 16.04 #
 ---------------------------------------------------------------------------------------------------
-Install Ansible on Ubuntu 16.04
----------------------------------
 $ sudo apt-get update
 $ sudo apt-get install ansible -y
 To remove ansible: $ sudo ap-get remove ansible
@@ -51,8 +49,8 @@ add hosts
 18.216.69.169
 18.222.189.132
  
- ------------------------------------------------
-command to generate key 
+ -------------------------------------------------------------------------------------------------
+# command to generate key:
  $ ssh-keygen  -->enter 3 times 
  -->go to ssh   --> $ cd .ssh
  $ cat id_rsa.pub ---> copy public key and paste it on authorized_key ---> $ sudo vi authorized_key
@@ -61,9 +59,9 @@ command to generate key
  restart ssh ----> $ sudo service sshd restart
  To check status ---> $ sudo service sshd status
  
- ------------------------------------------------------
-To create ansible playbook
---------------------------
+ ---------------------------------------------------------------------------------------------------
+# To create ansible playbook #
+---------------------------------------------------------------------------------------------------
  $ cd /etc/ansible/ 
 create playbook --->$ sudo vi playbook.yml
 

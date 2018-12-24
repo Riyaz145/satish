@@ -65,6 +65,48 @@ add hosts
  $ cd /etc/ansible/ 
 create playbook --->$ sudo vi playbook.yml
 
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Install git
+    apt: pkg=git
+  
+  - name: nodejs 8.12
+    get_url:
+        url: https://nodejs.org/dist/v8.12.0/node-v8.12.0.tar.gz
+        dest: /opt
+
+  - name: Extract node tar.xz
+    unarchive:
+     src: /opt/node-v8.12.0.tar.gz
+     dest: /opt
+     remote_src: yes
+
+  - name: Rename
+    command: mv /opt/node-v8.12.0 /opt/yls/node-v8
+
+  - name: Add Docker GPG key
+    apt_key: url=https://download.docker.com/linux/ubuntu/gpg
+        
+  - name: Add Docker APT repository
+    apt_repository:
+       repo: deb [arch=amd64] 
+    https:https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
  
- 
- 
+  - name: Install list of packages
+    apt:
+     name: ['apt-transport-https','ca-certificates','curl','software-properties-common','docker-ce']
+      state: present
+      state: present
+       update_cache: yes
+
+  - name: Install Docker Compose.
+
+    get_url:
+
+        url: https://github.com/docker/compose/releases/download/1.23.2/docker-compose-Linux-x86_64
+
+        dest: /usr/local/bin/docker-compose
+
+        mode: 4777

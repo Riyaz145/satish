@@ -1,5 +1,5 @@
 # Create EC2 instance #
---------------------------------------------------
+----------------------------------------------------------------------------------------------
 Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
 Choose Launch Instance.
 Choose an Amazon Machine Image (AMI), find an Ubuntu Server 16.04 LTS AMI of the list and choose Select.

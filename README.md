@@ -1,24 +1,24 @@
-# Create EC2 instance #
+               # Create EC2 instance #
 ----------------------------------------------------------------------------------------------
-Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
-Choose Launch Instance.
-Choose an Amazon Machine Image (AMI), find an Ubuntu Server 16.04 LTS AMI of the list and choose Select.
-Choose an Instance Type(t2 micro), choose Next: Configure Instance Details.
-Configure Instance Details[number of instances 2], choose Network, and then choose the entry for your default VPC.
-Choose Next: Add Storage.
-Choose Next: Tag Instance.
-choose Next: Configure Security Group:
-     (a) Assign a security group is set to Create a new security group
-     (b)Type: SSH 
-     (c)Protocol: TCP
-     (d)Port Range: 22 
-     (e)Source: Anywhere 0.0.0.0/0 
-Choose Review and Launch.
-Choose Launch.
-Select the check box for the key pair that you created, and then choose Launch Instances.
-Choose View Instances.
-Hostname of Instance 1 : MSR-test-Instance-1
-Hostname of Instance 2 : MSR-test-Instance-2
+               Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+               Choose Launch Instance.
+               Choose an Amazon Machine Image (AMI), find an Ubuntu Server 16.04 LTS AMI of the list and choose Select.
+               Choose an Instance Type(t2 micro), choose Next: Configure Instance Details.
+               Configure Instance Details[number of instances 2], choose Network, and then choose the entry for your default VPC.
+               Choose Next: Add Storage.
+               Choose Next: Tag Instance.
+               choose Next: Configure Security Group:
+                    (a) Assign a security group is set to Create a new security group
+                    (b)Type: SSH 
+                    (c)Protocol: TCP
+                    (d)Port Range: 22 
+                    (e)Source: Anywhere 0.0.0.0/0 
+               Choose Review and Launch.
+               Choose Launch.
+               Select the check box for the key pair that you created, and then choose Launch Instances.
+               Choose View Instances.
+               Hostname of Instance 1 : MSR-test-Instance-1
+               Hostname of Instance 2 : MSR-test-Instance-2
 
 ---------------------------------------------------------------------------------------------------
 # SSH connection to server #

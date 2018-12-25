@@ -59,7 +59,7 @@
       --> To check status ---> $ sudo service sshd status
  
  ---------------------------------------------------------------------------------------------------
-# To create ansible playbook #
+# Create ansible playbook #
 ---------------------------------------------------------------------------------------------------
        $ cd /etc/ansible/ 
      --> create playbook --->$ sudo vi playbook.yml
